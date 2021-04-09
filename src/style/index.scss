@@ -1,0 +1,12 @@
+@import "./common/reset.scss";
+@import "./common/scroll-bar.scss";
+@import "./common/element-ui.scss";
+
+#app{
+  height: 100%;
+}
+.container {
+  width      : 1170px;
+  margin     : 0 auto;
+  min-height : 900px
+}

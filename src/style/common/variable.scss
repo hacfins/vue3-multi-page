@@ -1,0 +1,36 @@
+$pf: hk- !global; // 项目前缀
+
+//---------------------------------------------------------------------------------
+//---------------------------------------- 背景色系--------------------
+//---------------------------------------------------------------------------------
+$grayLight: #f3f5f9 !global; // body背景色
+$main-container-bg-color: #ffffff !global; //main 中间区域背景色
+$list-title-bg-color:#FAFAFA!global; //列表title背景色
+$admin-title-bg-color:#00284D!global; //后台管理title背景色
+
+//---------------------------------------------------------------------------------
+//---------------------------------------- 文本色系--------------------
+//---------------------------------------------------------------------------------
+$text-hover-color:#2797EB!global;//滑上
+$text-active-color:#2797EB!global;//点击选中后
+$text-link-color:#2797EB!global;//可点击及有链接
+$text-first-color:#000!global; //一级标题
+$text-second-color:#333!global;//二级标题
+$text-third-color:#666!global;//三级标题
+$text-four-color:#999!global;//三级标题
+$disabled-color:#999!global;//禁用颜色
+$warn-text-color : #ff5a5a !global;           //警示颜色
+$hd-text-hover-color : #E44859 !global;           //头部滑上文字的颜色
+$nav-fir-color : rgba(0, 0, 0, 0.847058823529412) !global;
+$nav-sec-color : rgba(0, 0, 0, 0.647058823529412) !global;
+$nav-thr-color : rgba(0, 0, 0, 0.447058823529412) !global;
+$nav-fou-color : rgba(0, 0, 0, 0.247058823529412) !global;
+$oper-menu-color : #409eff !global;          //滑上
+$oper-menu-hover-color : #1890ff !global;          //滑上
+
+//---------------------------------------------------------------------------------
+//---------------------------------------- 导航色系--------------------
+//---------------------------------------------------------------------------------
+$nav-active-border-color:#2697EB!global;//选中border
+$nav-active-bg-color:#ecf5ff!global;//选中背景
+$admin-nav-active-bg-color:#1890FF!global;//后台管理选中背景

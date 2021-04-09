@@ -1,0 +1,380 @@
+// cover some element-ui styles
+.el-input__inner{
+  border-radius: 999em;
+  background-color: rgba(243, 244, 247, 1);
+  border-color: rgba(234, 237, 243, 1);
+  padding: 0 16px;
+}
+.el-input--prefix .el-input__inner{
+  padding-left:36px;
+}
+.el-input__prefix{
+  left:11px;
+}
+.el-input__suffix{
+  right:11px;
+}
+
+.el-textarea__inner{
+  padding:5px 16px;
+  border-radius: 10px;
+  background-color: rgba(243, 244, 247, 1);
+  border-color: rgba(234, 237, 243, 1);
+}
+.el-range-input{
+  background-color: rgba(243, 244, 247, 1);
+}
+.el-input.is-active .el-input__inner, .el-input__inner:focus,
+.el-range-editor.is-active,.el-range-editor.is-active .el-range-input,
+.el-textarea__inner.is-active,.el-textarea__inner:focus,
+.el-select .el-input.is-focus .el-input__inner,.el-cascader.is-opened .el-input__inner{
+  background-color: #fff;
+}
+
+
+
+
+
+.el-form{
+  .el-select .el-tag{
+    background-color: #f4f4f5;
+    border-color: #e9e9eb;
+    .el-select__tags-text{
+      color:#606266
+    }
+  }
+  .el-select .el-tag--mini{
+    .el-tag__close.el-icon-close{
+      right:-3px;
+    }
+  }
+}
+
+.el-table .el-select .el-input__inner{
+  border-radius: 4px;
+  background-color: #fff;
+  border-color: #dcdfe6;
+}
+.el-table__fixed-right{
+  &:before{
+    display: none;
+  }
+}
+
+.el-input-number.is-controls-right .el-input-number__increase{
+  border-radius: 0 999em 0 0;
+}
+.el-input-number.is-controls-right .el-input-number__decrease{
+  border-radius: 0 0 999em;
+}
+.el-input-group__prepend{
+  border-top-left-radius: 999em;
+  border-bottom-left-radius: 999em;
+  background-color: #f3f4f7;
+  border-color: #eaedf3;
+}
+
+.el-pagination .el-input__inner{
+  border-radius: 3px;
+  background-color: #fff;
+  border-color: #dcdfe6;
+}
+
+.el-dialog__wrapper{
+  overflow:hidden!important;
+}
+
+.el-dialog__header{
+  cursor: move;
+}
+
+.el-popover{
+  p{
+    line-height: 22px;
+  }
+}
+
+.el-checkbox.is-disabled,.el-checkbox__input.is-disabled{
+  cursor:default!important
+
+}
+
+.el-menu-item.is-active{
+  cursor:default!important;
+}
+.el-button{
+  border-radius: 20px;
+}
+
+.el-button--small{
+  font-size:14px;
+  padding:8px 15px;
+
+}
+.el-form,.el-button-stable--small{
+  .el-button--small{
+    padding:8px 0px!important;
+    width: 88px;
+  }
+}
+.el-button-stable--small-button{
+  padding:8px 0px!important;
+  width: 88px;
+}
+
+.el-button-form-item{
+  .el-form-item__content{
+    height:32px;
+    font-size:0
+  }
+}
+
+.el-button--primary:focus {
+  color: #fff;
+  background-color: #409EFF;
+  border-color: #409EFF;
+}
+
+.el-button--primary:hover{
+  background: #66b1ff;
+  border-color: #66b1ff;
+  color: #fff;
+}
+.el-button.crc_code{
+  padding:12px 8px;
+}
+
+.el-cascader-menu{
+  min-width:150px;
+  .el-cascader-menu__item{
+    min-width: 150px\0;
+  }
+}
+
+.el-menu--vertical{
+  .el-menu--popup{
+    .el-menu-item{
+      &:hover{
+        color:#fff!important
+      }
+
+    }
+
+  }
+
+}
+
+.el-pagination{
+  font-weight: normal!important;
+}
+
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+  background : #fff;
+}
+
+.el-pagination__jump{
+  margin-left:0;
+}
+
+//修复IE10 弹出页面晃动的问题
+.el-cascader-menus.el-popper {
+  position : absolute;
+  top      : 0
+}
+
+.el-menu-item i {
+  margin-right   : 5px;
+  width          : 24px;
+  text-align     : center;
+  font-size      : 16px;
+  vertical-align : middle;
+
+}
+
+.el-cascader-menu__item--extensible:after{
+  right:3px;
+}
+
+
+.el-table .cell {
+  white-space: nowrap;
+
+}
+.el-table .ascending .sort-caret.ascending{
+  border-bottom-color:#000;
+}
+.el-table .descending .sort-caret.descending{
+  border-top-color:#000;
+
+}
+.el-table{
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: #ebeef5;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 1px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    background-color: #ebeef5;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 54px;
+  }
+  .el-table-title{
+    th{
+      background: #fafafa;
+    }
+    th:first-child{
+      border-left:1px solid #EBEEF5;
+      .cell{
+        padding-left:24px;
+      }
+    }
+    th.el-table-column--selection{
+      .cell{
+        padding-left:14px;
+      }
+    }
+    th.el-table-column--selection+th{
+      .cell{
+        padding-left:0
+      }
+    }
+    th:last-child{
+      border-right:1px solid #EBEEF5
+    }
+    .cell{
+      font-weight: bold;
+      color: $nav-fir-color;
+    }
+  }
+  tbody{
+    tr{
+      td:first-child{
+        .cell{
+          padding-left:24px;
+        }
+      }
+      td.el-table-column--selection{
+        .cell{
+          padding-left:14px;
+        }
+      }
+      td.el-table-column--selection+td{
+        .cell{
+          padding-left:0
+        }
+      }
+    }
+  }
+  .el-table-column--selection{
+    .el-checkbox.is-disabled{
+      display:none;
+
+    }
+
+  }
+  .list-menu-oper {
+    font-size: 0;
+
+    .cell{
+      line-height: normal;
+    }
+    span{
+      font-size: 14px;
+      cursor: pointer;
+      color  :$oper-menu-color;
+      margin-right:8px;
+      &:hover{
+        color: $oper-menu-hover-color
+      }
+    }
+    span:last-child{
+      margin-right:0!important
+    }
+    a{
+      color  :  $oper-menu-color;
+      &:hover{
+        color:  $oper-menu-hover-color
+      }
+    }
+    span.disabled-menu{
+      cursor: not-allowed;
+      opacity:.5;
+
+    }
+  }
+  .moreDown {
+    line-height : normal;
+    span{
+      margin-right:0
+    }
+  }
+
+}
+
+.el-table:not(.el-table--small):not(.el-table--mini):not(.schedule-list-table){
+  td,th{
+    padding:15px 0;
+  }
+  .edit-list-item{
+    background : rgba(230, 247, 255, 1);
+    td{
+      padding:11px 0 10px 0;
+    }
+
+  }
+
+  .add-list-item{
+    td{
+      padding:20px 0;
+    }
+    .cell{
+      overflow:inherit;
+    }
+  }
+  .cell{
+    font-size: 14px;
+
+  }
+  .caret-wrapper{
+    height: 19px;
+    .sort-caret.ascending{
+      top:-2px;
+
+    }
+    .sort-caret.descending{
+      bottom:-1px;
+
+    }
+  }
+}
+.expend-table{
+  .el-table__expand-column{
+    .el-table__expand-icon{
+      display: none;
+    }
+  }
+  .el-table__expand-column+th{
+    .cell{
+      padding-left:24px;
+    }
+  }
+  .el-table__expand-column+td{
+    .cell{
+      padding-left:24px;
+    }
+  }
+  .el-table__expanded-cell{
+    padding:0
+  }
+
+
+}

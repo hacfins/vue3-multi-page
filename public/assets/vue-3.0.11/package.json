@@ -1,0 +1,76 @@
+{
+  "_from": "vue@^3.0.0",
+  "_id": "vue@3.0.11",
+  "_inBundle": false,
+  "_integrity": "sha1-yC+VlMv03MhpJB1MjdPgjZqPS18=",
+  "_location": "/vue",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "vue@^3.0.0",
+    "name": "vue",
+    "escapedName": "vue",
+    "rawSpec": "^3.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^3.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/vue/download/vue-3.0.11.tgz?cache=0&sync_timestamp=1617321643721&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue%2Fdownload%2Fvue-3.0.11.tgz",
+  "_shasum": "c82f9594cbf4dcc869241d4c8dd3e08d9a8f4b5f",
+  "_spec": "vue@^3.0.0",
+  "_where": "D:\\Code\\vue4\\hello-world",
+  "author": {
+    "name": "Evan You"
+  },
+  "bugs": {
+    "url": "https://github.com/vuejs/vue-next/issues"
+  },
+  "buildOptions": {
+    "name": "Vue",
+    "formats": [
+      "esm-bundler",
+      "esm-bundler-runtime",
+      "cjs",
+      "global",
+      "global-runtime",
+      "esm-browser",
+      "esm-browser-runtime"
+    ]
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@vue/compiler-dom": "3.0.11",
+    "@vue/runtime-dom": "3.0.11",
+    "@vue/shared": "3.0.11"
+  },
+  "deprecated": false,
+  "description": "vue",
+  "devDependencies": {
+    "lodash": "^4.17.15",
+    "marked": "^0.7.0",
+    "todomvc-app-css": "^2.3.0"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "homepage": "https://github.com/vuejs/vue-next/tree/master/packages/vue#readme",
+  "jsdelivr": "dist/vue.global.js",
+  "keywords": [
+    "vue"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "module": "dist/vue.runtime.esm-bundler.js",
+  "name": "vue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuejs/vue-next.git"
+  },
+  "types": "dist/vue.d.ts",
+  "unpkg": "dist/vue.global.js",
+  "version": "3.0.11"
+}

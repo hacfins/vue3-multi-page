@@ -1,0 +1,29 @@
+#[1]rewrite - 重写URL
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} !^/h5/
+  RewriteCond %{REQUEST_URI} !^$/
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule "^([^/]*)/?(.*)$" "/html/$1.html"
+  RewriteCond %{REQUEST_URI} !^/m/
+  RewriteCond %{REQUEST_URI} ^/$
+  RewriteRule "^$" "/html/index.html"
+
+  RewriteCond %{REQUEST_URI} ^/h5/
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule "^h5/([^/]*)/?(.*)$" "/h5/$1.html"
+</IfModule>
+
+<IfModule mod_expires.c>
+    #打开缓存
+    ExpiresActive On
+    #纯文本不缓存
+    ExpiresByType text/plain A0
+    ExpiresByType text/html  A0
+    <FilesMatch "cloud-config.js$">
+        ExpiresDefault A0
+    </FilesMatch>
+</IfModule>

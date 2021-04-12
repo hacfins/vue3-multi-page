@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory, createWebHashHistory} from 'vue-router'
+const noexsit = () => import(/* webpackChunkName: "noexsit-main" */ '@/pages/noexsit/children/noexsit')
 const index = () => import(/* webpackChunkName: "index-main" */ '@/pages/index/children/index')
 const index_index = () => import(/* webpackChunkName: "index-main" */ '@/pages/index/children/index-index')
 const index_set = () => import(/* webpackChunkName: "index-main" */ '@/pages/index/children/index-set')
@@ -29,6 +30,10 @@ const routes = [
         component: home,
         name     : '',
     },
+    {
+        path     : '/:pathMatch(.*)*',
+        component: noexsit,
+    }
 ];
 
 const router = createRouter({

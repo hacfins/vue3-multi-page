@@ -25,7 +25,7 @@ module.exports = {
     },
     chainWebpack       : config => {
         //【1】设置别名
-        config.resolve.alias.set('@', resolve('src')).set('common', resolve('src/common')).set('component', resolve('src/component')).set('assets', resolve('src/assets'));
+        config.resolve.alias.set('@', resolve('src')).set('common', resolve('src/common')).set('components', resolve('src/components')).set('assets', resolve('src/assets'));
 
         //【2】设置扩展，主要是为了cdn 的引入
         config.externals({

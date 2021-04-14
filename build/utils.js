@@ -4,6 +4,23 @@
 const glob       = require("glob")
 const is_product = process.env.NODE_ENV == "production"; // 正式环境
 
+const cdn = {
+    // 开发环境
+    dev  : {
+        css: [],
+        js : [
+            '/assets/vue-3.0.11/dist/vue.global.js'
+        ]
+    },
+    // 生产环境
+    build: {
+        css: [],
+        js : [
+            '/assets/vue-3.0.11/dist/vue.global.prod.js'
+        ]
+    }
+}
+
 function getEntrys() {
     let pages = {}
     // 调用时在文件vue.config.js中，所以使用'./src/...'的相对路径
@@ -21,6 +38,7 @@ function getEntrys() {
         }
         var page_title   = etToZh[fileName] ? etToZh[fileName] : '';
         pages[fileName]  = {
+            cdn           : is_product ? cdn.build : cdn.dev,
             title         : page_title,
             // 入口文件
             entry         : `src/pages/${fileName}/${fileName}.js`,

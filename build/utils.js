@@ -19,6 +19,7 @@ const cdn = {
             '/assets/vue-3.0.11/dist/vue.global.prod.js'
         ]
     }
+
 }
 
 function getEntrys() {

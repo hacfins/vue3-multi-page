@@ -14,7 +14,7 @@
   RewriteCond %{REQUEST_URI} ^/h5/
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule "^h5/([^/]*)/?(.*)$" "/h5/$1.html"
+  RewriteRule "^h5/([^/]*)/?(.*)$" "/h5/index.html"
 </IfModule>
 
 <IfModule mod_expires.c>

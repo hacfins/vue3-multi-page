@@ -6,10 +6,15 @@
   RewriteCond %{REQUEST_URI} !^$/
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule "^([^/]*)/?(.*)$" "/html/$1.html"
-  RewriteCond %{REQUEST_URI} !^/m/
+  RewriteRule "^([^/]*)/?(.*)\.html$" "/web/html/index.html" [L]
+  RewriteCond %{REQUEST_URI} !^/h5/
+  RewriteCond %{REQUEST_URI} !^$/
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule "^([^/]*)/?(.*)$" "/web/html/$1.html"
+  RewriteCond %{REQUEST_URI} !^/h5/
   RewriteCond %{REQUEST_URI} ^/$
-  RewriteRule "^$" "/html/index.html"
+  RewriteRule "^$" "/web/html/index.html"
 
   RewriteCond %{REQUEST_URI} ^/h5/
   RewriteCond %{REQUEST_FILENAME} !-d

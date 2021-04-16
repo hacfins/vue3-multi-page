@@ -1,6 +1,8 @@
 doctype html
 html(lang='en')
     head
+        -
+            var pre_name = `${htmlWebpackPlugin.options.is_pro}` == 'true' ? '/web' : '';
         title #{htmlWebpackPlugin.options.title}
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -11,8 +13,8 @@ html(lang='en')
         meta(http-equiv='Cache-Control', content='no-siteapp')
         meta(http-equiv='Cache-Control', content='no-transform ')
         block head
-            link(rel="stylesheet" href="/font-0.0.4/iconfont.css")
-            link(rel="stylesheet" href="/assets/element-plus-1.0.2/lib/theme-chalk/index.css")
+            link(rel="stylesheet" href=pre_name+"/font-0.0.4/iconfont.css")
+            link(rel="stylesheet" href=pre_name+"/assets/element-plus-1.0.2/lib/theme-chalk/index.css")
     body
         block content
             div#app
@@ -22,13 +24,13 @@ html(lang='en')
                 var cdn_js = `${htmlWebpackPlugin.options.cdn.js}`.split(',')
             each item in cdn_js
                 script(src=item)
-            script(src="/assets/vue-router-4.0.6/dist/vue-router.global.prod.js")
-            script(src="/assets/vuex-4.0.0/dist/vuex.global.prod.js")
-            script(src="/assets/axios-0.21.1/dist/axios.min.js")
-            script(src="/assets/element-plus-1.0.2/lib/index.full.js")
-            script(src="/assets/bowser-1.9.3/bowser.min.js")
-            script(src="/lib/origin-js/origin-js.js")
-            script(src="/lib/clamp/clamp.js")
+            script(src=pre_name+"/assets/vue-router-4.0.6/dist/vue-router.global.prod.js")
+            script(src=pre_name+"/assets/vuex-4.0.0/dist/vuex.global.prod.js")
+            script(src=pre_name+"/assets/axios-0.21.1/dist/axios.min.js")
+            script(src=pre_name+"/assets/element-plus-1.0.2/lib/index.full.js")
+            script(src=pre_name+"/assets/bowser-1.9.3/bowser.min.js")
+            script(src=pre_name+"/lib/origin-js/origin-js.js")
+            script(src=pre_name+"/lib/clamp/clamp.js")
             script.
                 // 对Date的扩展，将 Date 转化为指定格式的String
                 // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，

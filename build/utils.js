@@ -16,7 +16,7 @@ const cdn = {
     build: {
         css: [],
         js : [
-            '/assets/vue-3.0.11/dist/vue.global.prod.js'
+            '/web/assets/vue-3.0.11/dist/vue.global.prod.js'
         ]
     }
 
@@ -39,6 +39,7 @@ function getEntrys() {
         }
         var page_title   = etToZh[fileName] ? etToZh[fileName] : '';
         pages[fileName]  = {
+            is_pro        : is_product,
             cdn           : is_product ? cdn.build : cdn.dev,
             title         : page_title,
             // 入口文件

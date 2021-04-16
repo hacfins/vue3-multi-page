@@ -9,6 +9,8 @@ function resolve(dir) {
 };
 
 module.exports = {
+    publicPath         : is_product ? '/web/' : '/',
+    outputDir          : is_product ? resolve('/dist/web/') : 'dist',
     // 多页面multi-page模式下构建应用，每个page应该有一个对应的 JavaScript 入口文件。
     // 这里使用了动态配置pages的方法，减少重复代码的书写，统一配置。
     pages,
@@ -72,7 +74,8 @@ module.exports = {
             var delete_pre_load_name = 'preload-' + attr;
             config.plugins.delete(delete_pre_name)
             config.plugins.delete(delete_pre_load_name)
-        };
+        }
+        ;
 
         //【7】代码压缩及分割
         config.optimization.minimize = true;
@@ -134,10 +137,11 @@ module.exports = {
                     ignore: ['.*', 'images/*.*', 'lib/**/*.*']
                 }, {
                     from: path.resolve(__dirname, './.htaccess'),
-                    to  : './'
+                    to  : '../'
                 }]
             ])
-        };
+        }
+        ;
     },
     css                : {
         loaderOptions: {

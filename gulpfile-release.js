@@ -22,7 +22,7 @@ gulp.task('css-min-rev-lib', function() {
     return gulp.src(['./public/lib/**/*.css'])
     .pipe(cleancss()) //- 压缩CSS
         .pipe(rev())                            //- 文件名加MD5后缀
-        .pipe(gulp.dest( './dist/lib/')) 		//- 发布到线上版本
+        .pipe(gulp.dest( './dist/web/lib/')) 		//- 发布到线上版本
         .pipe(rev.manifest('./rev' + '/css-rev-manifest-lib.json', {merge: true, base: './rev'})) //- 生成一个rev-manifest.json
         .pipe(gulp.dest('./rev'));          //- 将 rev-manifest.json 保存到 rev 目录内
 });
@@ -35,7 +35,7 @@ gulp.task('js-min-rev-lib', function () {
     ])
 			.pipe(uglify())//压缩js
 			.pipe(rev())                      	//- 文件名加MD5后缀
-       		.pipe(gulp.dest( './dist/lib/')) 		//- 发布到线上版本
+       		.pipe(gulp.dest( './dist/web/lib/')) 		//- 发布到线上版本
 			.pipe(rev.manifest('./rev' + '/js-rev-manifest-lib.json', {merge: true, base: './rev'})) //- 生成一个rev-manifest.json
 			.pipe(gulp.dest('./rev'));       //- 将 rev-manifest.json 保存到 rev 目录内
 });
@@ -43,9 +43,9 @@ gulp.task('js-min-rev-lib', function () {
 
 //【3】pug文件引用路径替换
 gulp.task('pug-rev-replace', function() {
-	return gulp.src(['./rev/*.json', './dist/**/*.html', './dist/**/*.js'])		//- 读取 rev-manifest.json 文件以及需要进行css/js名替换的文件
+	return gulp.src(['./rev/*.json', './dist/web/**/*.html', './dist/web/**/*.js'])		//- 读取 rev-manifest.json 文件以及需要进行css/js名替换的文件
             .pipe(revcollector()) //- 执行文件内css/js名的替换
-        	.pipe(gulp.dest( './dist')) 		//- 发布到线上版本
+        	.pipe(gulp.dest( './dist/web')) 		//- 发布到线上版本
 });
 
 //【4】执行任务

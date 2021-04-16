@@ -128,3 +128,18 @@ html(lang='en')
                     }
                     return flag;
                 }
+                if (!IsPC()){
+
+                    if (getUrlRelativePath() == '/') {
+                        location.href = '/h5'
+                    } else {
+                        var path = getUrlRelativePath();
+                        var reg  = /^\/h5/;
+                        if (reg.test(path)) {
+                            location.href = '/h5/noexsit'
+                        } else {
+                            location.href = '/h5' + path + ''
+                        }
+
+                    }
+                }

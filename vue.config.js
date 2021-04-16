@@ -134,9 +134,12 @@ module.exports = {
                 [{
                     from  : path.resolve(__dirname, './public'),
                     to    : './',
-                    ignore: ['.*', 'images/*.*', 'lib/**/*.*']
-                }, {
+                    ignore: ['.*', 'images/*.*', 'lib/**/*.*','cloud-config.js']
+                },{
                     from: path.resolve(__dirname, './.htaccess'),
+                    to  : '../'
+                },{
+                    from: path.resolve(__dirname, './public/cloud-config.js'),
                     to  : '../'
                 }]
             ])

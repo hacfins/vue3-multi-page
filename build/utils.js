@@ -9,14 +9,14 @@ const cdn = {
     dev  : {
         css: [],
         js : [
-            '/assets/vue-3.0.11/dist/vue.global.js'
+            '/assets/vue-3.2.26/dist/vue.global.js'
         ]
     },
     // 生产环境
     build: {
         css: [],
         js : [
-            '/web/assets/vue-3.0.11/dist/vue.global.prod.js'
+            '/web/assets/vue-3.2.26/dist/vue.global.prod.js'
         ]
     }
 

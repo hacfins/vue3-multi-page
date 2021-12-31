@@ -4,4 +4,5 @@ import store from '@/store'
 import App from './app.vue'
 import ElementPlus from 'element-plus';
 import '@/style/index.scss'
-createApp(App).use(router).use(store).use(ElementPlus).mount('#app')
+import dataV from '@jiaminghi/data-view'
+createApp(App).use(router).use(store).use(ElementPlus).use(dataV).mount('#app')

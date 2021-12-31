@@ -449,7 +449,8 @@
                             selectedMode: 'single',
                             radius      : [0, '50%'],
                             label       : {
-                                position: 'inner'
+                                position: 'inner',
+                                color:'#fff'
                             },
                             labelLine   : {
                                 show: false
@@ -466,28 +467,27 @@
                             selectedMode: 'single',
                             radius      : ['60%', '75%'],
                             label       : {
-                                formatter: '  {a|{a}}  \n    {d}%   ',
-                                rich     : {
-                                    a  : {
-                                        color     : '#fff',
+                                formatter: '{b|{b}}\n {per|{d}%}  ',
+                                rich: {
+                                    a: {
+                                        color: '#fff',
                                         lineHeight: 22,
-                                        align     : 'center'
+                                        align: 'center'
                                     },
-                                    hr : {
+                                    hr: {
                                         borderColor: '#aaa',
                                         width      : '100%',
                                         borderWidth: 0.5,
                                         height     : 0
                                     },
-                                    b  : {
-                                        fontSize  : 16,
+                                    b: {
+                                        color: '#fff',
+                                        fontSize: 14,
+                                        fontWeight: 'bold',
                                         lineHeight: 33
                                     },
                                     per: {
-                                        color          : '#eee',
-                                        backgroundColor: '#334455',
-                                        padding        : [2, 4],
-                                        borderRadius   : 2
+                                        color: '#fff',
                                     }
                                 }
                             },

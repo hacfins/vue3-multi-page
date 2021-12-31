@@ -525,7 +525,10 @@
                     },
                     yAxis  : {
                         boundaryGap: ['20%', '20%'],
-                        axisLine   : {lineStyle: {color: xyLineColor}},
+                        axisTick:{
+                            show:true,
+                        },
+                        axisLine   : {show:true,lineStyle: {color: xyLineColor}},
                         splitLine  : {lineStyle: {color: splitLineColor}},
                         name       : '（条）',
                         nameGap    : 10
@@ -583,6 +586,9 @@
                     xAxis  : {
                         type       : 'value',
                         boundaryGap: [0, 0.01],
+                        axisTick:{
+                            show:true,
+                        },
                         axisLine   : {
                             show:true,
                             lineStyle: {

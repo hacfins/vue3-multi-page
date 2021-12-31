@@ -584,6 +584,7 @@
                         type       : 'value',
                         boundaryGap: [0, 0.01],
                         axisLine   : {
+                            show:true,
                             lineStyle: {
                                 color: xyLineColor
                             }
@@ -634,10 +635,10 @@
                         type     : 'value',
                         axisLine : {lineStyle: {color: xyLineColor}},
                         splitLine: {lineStyle: {color: splitLineColor}},
-                        max      : function (value) {
+                        min      : function (value) {
                             return value.min - 1
                         },
-                        min      : function (value) {
+                        max      : function (value) {
                             return value.max + 1
                         },
                         name     : '（次）',

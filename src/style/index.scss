@@ -1,10 +1,14 @@
 @import "./common/reset.scss";
 @import "./common/scroll-bar.scss";
 @import "./common/element-ui.scss";
-
+@import "./common/bin-ui.scss";
 #app{
   height: 100%;
+  background-color : $bgc;
+  overflow-x       : auto;
+  overflow-y       : auto;
 }
+
 .container {
   width      : 1170px;
   margin     : 0 auto;

@@ -165,25 +165,38 @@ export default function (url = '', options, type,loading_key) {
     //成功的回调
     function success(res) {
         loadingCallBack();
+
         switch (res.data.code) {
             case 200:
+            case 1000:
+            case 111111:
                 if (options.callback) {
-                    if (typeof (res.data["count"]) != 'undefined') {
-                        if(typeof (res.data["time"]) != 'undefined'){
-                            options.callback(res.data.result, res.data["count"],res.data["time"]);
+                    if(typeof (res.data["result"]) != 'undefined' && res.data["result"]){
+
+
+                        if (typeof (res.data["result"]["total"]) != 'undefined'){
+                            if(typeof (res.data["time"]) != 'undefined'){
+                                options.callback(res.data.result.list,res.data.result.total,res.data["time"]);
+                            }else{
+                                options.callback(res.data.result.list,res.data.result.total);
+                            }
                         }else{
-                            options.callback(res.data.result, res.data["count"]);
+                            if(typeof (res.data["time"]) != 'undefined'){
+                                options.callback(res.data.result,res.data["time"]);
+
+                            }else{
+                                options.callback(res.data.result);
+                            }
+
                         }
-                    } else if (typeof (res.data["allcount"]) != 'undefined') {
-                        options.callback(res.data.result, res.data["count"], res.data["allcount"]);
-                    } else if (res.data.result) {
+
+                    }else{
                         if(typeof (res.data["time"]) != 'undefined'){
-                            options.callback(res.data.result,res.data["time"]);
+                            options.callback(res.data,res.data["time"]);
                         }else{
-                            options.callback(res.data.result);
+                            options.callback(res.data);
                         }
-                    } else {
-                        options.callback(res.data);
+
                     }
                 }
                 break;
@@ -197,11 +210,17 @@ export default function (url = '', options, type,loading_key) {
                 },2000)
                 break;
             case 403://缺少令牌
+            case 101101:
 
+                // localStorage.clear()
+                // sessionStorage.clear();
+                // clearAllCookie();
+                removeCookie('token')
+                removeCookie('head')
                 var path =  getUrlRelativePath();
-                if(path.search(/^(\/m)?\/u\//gi) == -1){
+                if(path.search(/^(\/h5)?\/u\//gi) == -1 && path.search(/^(\/h5)?\/passport\/login/gi) == -1 && path.search(/^(\/h5)?\/center/gi) == -1
+                    && path.search(/^(\/h5)?\/home\/school/gi) == -1 && path != '/' && path.search(/^(\/h5)?\/detail/gi) == -1 && path.search(/^(\/h5)?\/home\/live/gi) == -1 && path.search(/^(\/h5)?\/source/gi) == -1){
                     location.href = '/passport/login';
-
                 }
 
                 break;
@@ -233,6 +252,12 @@ export default function (url = '', options, type,loading_key) {
             case 712:
                 document.location.href = "/";
                 break;
+            // case 104000:
+            //     localStorage.clear()
+            //     sessionStorage.clear();
+            //     clearAllCookie()
+            //     location.href = '/passport/login';
+            //     break;
             default :
                 if (typeof (options["errorback"]) != 'undefined') {
                     if(typeof (res.data["time"]) != 'undefined'){
@@ -242,6 +267,7 @@ export default function (url = '', options, type,loading_key) {
                     }
 
                 } else {
+
                     Message.error(res.data.msg)
                 }
                 break;

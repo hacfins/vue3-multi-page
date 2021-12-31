@@ -10,4 +10,5 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss">
 
+
 </style>

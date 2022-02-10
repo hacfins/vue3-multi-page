@@ -705,12 +705,13 @@
         }
     }
 </script>
-<style lang="scss" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss">
     $p : 156px;
     $itemW : 110px;
     $itemH : 110px;
     $rotateW : 4 * $p;
     $rotateH : 3.46 * $p;
+
 
 
 
@@ -784,6 +785,9 @@
     }
 
 
+
+
+
     [flex~="content:around"] {
         -webkit-box-pack        : justify;
         -webkit-justify-content : space-around;
@@ -797,20 +801,12 @@
 
     .overview {
         width               : 100%;
-        height              : calc(100% - 80px);
-        min-height: 1000px;
+        height              : 1000px;
         box-sizing          : border-box;
         padding             : 20px 0;
         background-image    : url('~@/assets/images/overview/ge.png');
         background-repeat   : no-repeat;
         background-position : center 40%;
-        .container{
-            min-height: 0;
-            margin:0;
-            padding:0;
-            width: auto;
-
-        }
         .dept-list {
             color : #fff;
             .list-header {
@@ -1228,11 +1224,11 @@
         }
     }
 
-    .handle-btn  deep(.bin-select-dropdown) {
+    .handle-btn /deep/ .bin-select-dropdown {
         background-color : #01173a;
     }
 
-    .handle-btn  deep(.bin-date-picker-rel) {
+    .handle-btn /deep/ .bin-date-picker-rel {
         line-height : 32px;
     }
 
